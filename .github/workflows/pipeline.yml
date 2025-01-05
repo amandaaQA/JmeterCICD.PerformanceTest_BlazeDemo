@@ -17,17 +17,10 @@ jobs:
       - name: Run JMeter Test
         uses: QAInsights/PerfAction@v5.6.2
         with:
-          test-plan-path: './TestPlan/LoadTest_BlazeDemo.jmx.jmx'
-          args: ""
+          test-plan-path: './LoadTest_BlazeDemo.jmx'
       - name: Upload Results
         uses: actions/upload-artifact@v3
         with:
           name: jmeter-results
           path: result.jtl
-          if-no-files-found: error
-      - name: Upload HTML Reports
-        uses: actions/upload-artifact@v3
-        with:
-          name: jmeter-html-reports
-          path: reports
           if-no-files-found: error
