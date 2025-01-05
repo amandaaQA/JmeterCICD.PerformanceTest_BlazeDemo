@@ -2,9 +2,17 @@
 Simple performance testing on [Blaze Demo website](https://blazedemo.com/) using [Apache JMeter](https://jmeter.apache.org/), [PerfAction](https://github.com/QAInsights/PerfAction) and Github Actions to automate the Test Execution.
 
 #### Explaining the performance test
-
-Scenario:
-Platform: 
+```
+Test type:      Load Test
+Description:    We build a simple load test using 5 virtual users to book a vacation using on BlazeDemo website
+Steps:
+    1. Enter the website https://blazedemo.com/;
+    2. Choose origin and destination and select 'Find Flights';
+    3. Choose the flight;
+    4. Insert your informations and click send;
+* In order to emulates the user behaviour, we inser a random 'think time' between steps thats vary from 100-5000ms on most of steps and 100-10000ms on step 3;
+* We also check if the requests reponse's code are 200-OK;
+```
 
 ### Running the JMeter Test
 
